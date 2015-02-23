@@ -1,24 +1,270 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="q3F-sU-tJY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--News Feed-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="News Feed" id="vXZ-lx-hvc" customClass="ViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="n6g-vB-MRq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="compose" id="d6c-v6-1CV">
+                                <rect key="frame" x="0.0" y="63" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_feed" id="EoV-Hu-pDo">
+                                <rect key="frame" x="0.0" y="109" width="320" height="1438"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="n7J-Rh-fFr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="173.33333333333334" y="365.41333333333336"/>
+            <point key="canvasLocation" x="1729" y="365"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Xot-8m-JyA">
+            <objects>
+                <tabBarController id="q3F-sU-tJY" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="BW1-Qf-TEQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Qz7-qB-IbH" kind="relationship" relationship="viewControllers" id="zVU-UY-jwZ"/>
+                        <segue destination="5BC-iI-qWj" kind="relationship" relationship="viewControllers" id="VkW-zc-6bn"/>
+                        <segue destination="qWr-tX-QZH" kind="relationship" relationship="viewControllers" id="aKK-Bp-yUT"/>
+                        <segue destination="GHV-qy-2VG" kind="relationship" relationship="viewControllers" id="rD9-Bu-gzL"/>
+                        <segue destination="bwU-mR-0PS" kind="relationship" relationship="viewControllers" id="1mW-Mk-iNE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMw-89-JPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="608" y="3086"/>
+        </scene>
+        <!--News Feed-->
+        <scene sceneID="43O-V4-8Bv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Qz7-qB-IbH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News Feed" image="feed_tab" id="aUO-yd-2XL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NDF-8g-dav">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="jyL-Ao-7ky"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nI5-tu-FYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="365"/>
+        </scene>
+        <!--Requests-->
+        <scene sceneID="ceo-rk-oVQ">
+            <objects>
+                <viewController title="Requests" id="pRm-2j-P9y" customClass="ViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ePX-WV-m2x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="ODd-tR-szO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="messages" id="jOH-f8-uXb">
+                                <rect key="frame" x="0.0" y="66" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qv9-gO-pgq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GaZ-Kl-lcs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="1081"/>
+        </scene>
+        <!--Requests-->
+        <scene sceneID="LsY-5F-BPf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="5BC-iI-qWj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Requests" image="requests_tab" id="xfS-zv-aUd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zhs-tC-8fy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pRm-2j-P9y" kind="relationship" relationship="rootViewController" id="7TJ-3H-pCP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeu-dc-vdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="1081"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="v2y-SU-OdB">
+            <objects>
+                <viewController title="Messages" id="1a3-iL-aEc" customClass="ViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hEv-J3-uHD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="Gqw-1F-Tl4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="banner" id="McQ-Yo-64z">
+                                <rect key="frame" x="3" y="65" width="320" height="59"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XgH-eH-arU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgO-Tz-vwk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="1787"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="KD5-zx-ueK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qWr-tX-QZH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Messages" image="messages_tab" id="8eu-6U-Ee9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R0e-Dj-6dR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1a3-iL-aEc" kind="relationship" relationship="rootViewController" id="0bz-gl-kGQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dz3-qQ-Mut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="1787"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="DNY-3d-zjR">
+            <objects>
+                <viewController title="Notifications" id="TrJ-Ow-rVg" customClass="ViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qNS-Rt-Z9L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="k40-EM-kqj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="notifications" id="Ukr-Wa-3PD">
+                                <rect key="frame" x="-5" y="63" width="320" height="818"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="piZ-7W-WIX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ol-iQ-Hzh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="2471"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="wj6-LI-GBU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GHV-qy-2VG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notifications" image="notifications_tab" id="7uu-GC-eW2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hNJ-o5-gg0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TrJ-Ow-rVg" kind="relationship" relationship="rootViewController" id="Dcq-Kz-HRA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lyy-pZ-v3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="2471"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="JkM-gQ-rLS">
+            <objects>
+                <viewController title="More" id="6a2-AX-S37" customClass="ViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ye-h3-kgj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="7mb-Zs-eIP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="people" id="YN9-1X-83s">
+                                <rect key="frame" x="0.0" y="63" width="320" height="1006"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DyY-VU-Nis"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9N0-Zm-AnL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="3153"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="5fv-VQ-Wcq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="bwU-mR-0PS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="more_tab" id="K1y-Gu-Wz1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aE5-rc-6EI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6a2-AX-S37" kind="relationship" relationship="rootViewController" id="x65-gf-CdP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8df-uf-Ufq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="3153"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="banner" width="320" height="59"/>
+        <image name="compose" width="320" height="46"/>
+        <image name="feed_tab" width="27" height="27"/>
+        <image name="home_feed" width="320" height="1438"/>
+        <image name="messages" width="320" height="460"/>
+        <image name="messages_tab" width="27" height="27"/>
+        <image name="more_tab" width="27" height="27"/>
+        <image name="nav" width="320" height="64"/>
+        <image name="notifications" width="320" height="818"/>
+        <image name="notifications_tab" width="27" height="27"/>
+        <image name="people" width="320" height="1006"/>
+        <image name="requests_tab" width="27" height="27"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
