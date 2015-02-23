@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		700E00061A9BAA8800661195 /* FacebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700E00051A9BAA8800661195 /* FacebookTests.swift */; };
+		700E00101A9BCB4700661195 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700E000F1A9BCB4700661195 /* NewsFeedViewController.swift */; };
 		700EFFF01A9BAA8700661195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EFFEF1A9BAA8700661195 /* AppDelegate.swift */; };
-		700EFFF21A9BAA8700661195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EFFF11A9BAA8700661195 /* ViewController.swift */; };
 		700EFFF51A9BAA8700661195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700EFFF31A9BAA8700661195 /* Main.storyboard */; };
 		700EFFF71A9BAA8700661195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700EFFF61A9BAA8700661195 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -27,10 +27,10 @@
 /* Begin PBXFileReference section */
 		700E00041A9BAA8800661195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		700E00051A9BAA8800661195 /* FacebookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookTests.swift; sourceTree = "<group>"; };
+		700E000F1A9BCB4700661195 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsFeedViewController.swift; path = ../NewsFeedViewController.swift; sourceTree = "<group>"; };
 		700EFFEA1A9BAA8700661195 /* Facebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		700EFFEE1A9BAA8700661195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		700EFFEF1A9BAA8700661195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		700EFFF11A9BAA8700661195 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		700EFFF41A9BAA8700661195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		700EFFF61A9BAA8700661195 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		700EFFFF1A9BAA8800661195 /* FacebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,8 +92,8 @@
 		700EFFEC1A9BAA8700661195 /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
+				700E000F1A9BCB4700661195 /* NewsFeedViewController.swift */,
 				700EFFEF1A9BAA8700661195 /* AppDelegate.swift */,
-				700EFFF11A9BAA8700661195 /* ViewController.swift */,
 				700EFFF31A9BAA8700661195 /* Main.storyboard */,
 				700EFFF61A9BAA8700661195 /* Images.xcassets */,
 				700EFFED1A9BAA8700661195 /* Supporting Files */,
@@ -208,8 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				700EFFF21A9BAA8700661195 /* ViewController.swift in Sources */,
 				700EFFF01A9BAA8700661195 /* AppDelegate.swift in Sources */,
+				700E00101A9BCB4700661195 /* NewsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,7 @@ x hours spent in total
 
 
 #### Notes
-**Setting iOS Status Bar Color
-**
+#####Setting iOS Status Bar Color
 
 [CoderWall](https://coderwall.com/p/dyqrfa/customize-navigation-bar-appearance-with-swift) has a straightforward guide for programatically setting the status bar color in iOS, app-wide.
 

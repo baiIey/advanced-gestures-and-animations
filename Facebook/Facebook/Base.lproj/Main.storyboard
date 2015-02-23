@@ -7,11 +7,15 @@
         <!--News Feed-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="News Feed" id="vXZ-lx-hvc" customClass="ViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="News Feed" id="vXZ-lx-hvc" customClass="NewsFeedViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="background" id="Eh1-CH-IHa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="n6g-vB-MRq">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -20,14 +24,24 @@
                                 <rect key="frame" x="0.0" y="63" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_feed" id="EoV-Hu-pDo">
-                                <rect key="frame" x="0.0" y="109" width="320" height="1438"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="U0B-fz-FUp">
+                                <rect key="frame" x="0.0" y="109" width="320" height="410"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="home_feed" id="EoV-Hu-pDo">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1438"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="n7J-Rh-fFr"/>
+                    <connections>
+                        <outlet property="feedView" destination="EoV-Hu-pDo" id="KDG-35-u2g"/>
+                        <outlet property="scrollView" destination="U0B-fz-FUp" id="Flr-Jk-GU1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,6 +266,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="320" height="568"/>
         <image name="banner" width="320" height="59"/>
         <image name="compose" width="320" height="46"/>
         <image name="feed_tab" width="27" height="27"/>
