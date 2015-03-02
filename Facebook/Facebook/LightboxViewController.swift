@@ -12,8 +12,12 @@ class LightboxViewController: UIViewController {
 
     @IBOutlet weak var photoView: UIImageView!
     
+    var photoDetail: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        photoView.image = photoDetail
 
         // Do any additional setup after loading the view.
     }

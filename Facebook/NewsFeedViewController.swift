@@ -13,6 +13,8 @@ class NewsFeedViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var feedView: UIImageView!
     
+    var selectedImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,18 +28,21 @@ class NewsFeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onTap(sender: AnyObject) {
+    @IBAction func onTap(sender: UITapGestureRecognizer) {
+        selectedImageView = sender.view as UIImageView
+        
         performSegueWithIdentifier("photoSegue", sender: nil)
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        println("I'm preparing for segue")
+        
+        var destinationViewController = segue.destinationViewController as LightboxViewController
+        
+        destinationViewController.photoDetail = selectedImageView.image
     }
-    */
 
 }
