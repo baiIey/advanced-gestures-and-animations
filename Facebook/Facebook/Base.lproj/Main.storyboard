@@ -81,28 +81,48 @@
                     <connections>
                         <outlet property="feedView" destination="EoV-Hu-pDo" id="KDG-35-u2g"/>
                         <outlet property="scrollView" destination="U0B-fz-FUp" id="Flr-Jk-GU1"/>
-                        <segue destination="RIU-4k-ucW" kind="modal" identifier="imageSegue" id="60S-xW-rFH"/>
+                        <segue destination="RIU-4k-ucW" kind="modal" identifier="photoSegue" id="60S-xW-rFH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="sUK-Ph-hui"/>
-                <tapGestureRecognizer id="gdi-sW-xV9"/>
-                <tapGestureRecognizer id="AMB-dC-bMu"/>
-                <tapGestureRecognizer id="vy5-Ex-gW1"/>
-                <tapGestureRecognizer id="gSq-ih-kbn"/>
+                <tapGestureRecognizer id="sUK-Ph-hui">
+                    <connections>
+                        <action selector="onTap:" destination="vXZ-lx-hvc" id="iUu-XF-rfI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gdi-sW-xV9">
+                    <connections>
+                        <action selector="onTap:" destination="vXZ-lx-hvc" id="oSD-pa-UE1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="AMB-dC-bMu">
+                    <connections>
+                        <action selector="onTap:" destination="vXZ-lx-hvc" id="zGi-y7-dFT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vy5-Ex-gW1">
+                    <connections>
+                        <action selector="onTap:" destination="vXZ-lx-hvc" id="SRm-ym-FZ5"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gSq-ih-kbn">
+                    <connections>
+                        <action selector="onTap:" destination="vXZ-lx-hvc" id="Di8-Au-adn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1729" y="365"/>
         </scene>
-        <!--Lightbox-->
+        <!--Photo-->
         <scene sceneID="By9-i9-Gw7">
             <objects>
-                <viewController title="Lightbox" id="RIU-4k-ucW" sceneMemberID="viewController">
+                <viewController title="Photo" id="RIU-4k-ucW" customClass="LightboxViewController" customModule="Facebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HQ6-c0-ql5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OxV-Mz-4LK">
-                                <rect key="frame" x="0.0" y="56" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="67" width="320" height="449"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="photo_actions" id="TVl-Pi-hK9">
@@ -110,14 +130,26 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="doneButton" id="ub4-1s-qan">
-                                <rect key="frame" x="253" y="20" width="51" height="27"/>
+                                <rect key="frame" x="253" y="25" width="51" height="27"/>
                                 <autoresizingMask key="autoresizingMask"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0Nj-lx-x27" appends="YES" id="4G6-5a-pLB"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="photoView" destination="OxV-Mz-4LK" id="Bw9-Ib-UwB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdJ-NF-PyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0Nj-lx-x27">
+                    <connections>
+                        <action selector="doneButtonDidPress:" destination="RIU-4k-ucW" id="fi7-D3-4NH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2172" y="365"/>
         </scene>

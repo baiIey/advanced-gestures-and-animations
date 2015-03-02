@@ -1,22 +1,19 @@
 //
-//  NewsFeedViewController.swift
+//  LightboxViewController.swift
 //  Facebook
 //
-//  Created by Brian Bailey on 2/23/15.
+//  Created by Brian Bailey on 3/1/15.
 //  Copyright (c) 2015 Nevver. All rights reserved.
 //
 
 import UIKit
 
-class NewsFeedViewController: UIViewController {
+class LightboxViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var feedView: UIImageView!
+    @IBOutlet weak var photoView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        scrollView.contentSize = feedView.image!.size // set content size for scrollview
 
         // Do any additional setup after loading the view.
     }
@@ -26,8 +23,9 @@ class NewsFeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onTap(sender: AnyObject) {
-        performSegueWithIdentifier("photoSegue", sender: nil)
+    @IBAction func doneButtonDidPress(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
 
     /*

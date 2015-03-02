@@ -12,6 +12,7 @@
 		700EFFF01A9BAA8700661195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EFFEF1A9BAA8700661195 /* AppDelegate.swift */; };
 		700EFFF51A9BAA8700661195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700EFFF31A9BAA8700661195 /* Main.storyboard */; };
 		700EFFF71A9BAA8700661195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700EFFF61A9BAA8700661195 /* Images.xcassets */; };
+		70A680D41AA4072F00EF2EF0 /* LightboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A680D31AA4072F00EF2EF0 /* LightboxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		700EFFF41A9BAA8700661195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		700EFFF61A9BAA8700661195 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		700EFFFF1A9BAA8800661195 /* FacebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A680D31AA4072F00EF2EF0 /* LightboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightboxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				700E000F1A9BCB4700661195 /* NewsFeedViewController.swift */,
+				70A680D31AA4072F00EF2EF0 /* LightboxViewController.swift */,
 				700EFFEF1A9BAA8700661195 /* AppDelegate.swift */,
 				700EFFF31A9BAA8700661195 /* Main.storyboard */,
 				700EFFF61A9BAA8700661195 /* Images.xcassets */,
@@ -210,6 +213,7 @@
 			files = (
 				700EFFF01A9BAA8700661195 /* AppDelegate.swift in Sources */,
 				700E00101A9BCB4700661195 /* NewsFeedViewController.swift in Sources */,
+				70A680D41AA4072F00EF2EF0 /* LightboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +390,7 @@
 				700E000B1A9BAA8800661195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		700E000C1A9BAA8800661195 /* Build configuration list for PBXNativeTarget "FacebookTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +399,7 @@
 				700E000E1A9BAA8800661195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		700EFFE51A9BAA8700661195 /* Build configuration list for PBXProject "Facebook" */ = {
 			isa = XCConfigurationList;
