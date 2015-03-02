@@ -14,6 +14,7 @@ class NewsFeedViewController: UIViewController {
     @IBOutlet weak var feedView: UIImageView!
     
     var selectedImageView: UIImageView!
+    var fadeTransition: FadeTransition!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,13 @@ class NewsFeedViewController: UIViewController {
         var destinationViewController = segue.destinationViewController as LightboxViewController
         
         destinationViewController.photoDetail = selectedImageView.image
+        
+        fadeTransition = FadeTransition()
+        fadeTransition.duration = 3
+        
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        destinationViewController.transitioningDelegate = fadeTransition
+        
     }
 
 }

@@ -13,6 +13,9 @@
 		700EFFF51A9BAA8700661195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700EFFF31A9BAA8700661195 /* Main.storyboard */; };
 		700EFFF71A9BAA8700661195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700EFFF61A9BAA8700661195 /* Images.xcassets */; };
 		70A680D41AA4072F00EF2EF0 /* LightboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A680D31AA4072F00EF2EF0 /* LightboxViewController.swift */; };
+		70A680D71AA417CD00EF2EF0 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A680D51AA417CD00EF2EF0 /* BaseTransition.swift */; };
+		70A680D81AA417CD00EF2EF0 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A680D61AA417CD00EF2EF0 /* FadeTransition.swift */; };
+		70A680DB1AA41C4A00EF2EF0 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A680DA1AA41C4A00EF2EF0 /* ImageTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		700EFFF61A9BAA8700661195 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		700EFFFF1A9BAA8800661195 /* FacebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A680D31AA4072F00EF2EF0 /* LightboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightboxViewController.swift; sourceTree = "<group>"; };
+		70A680D51AA417CD00EF2EF0 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		70A680D61AA417CD00EF2EF0 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		70A680DA1AA41C4A00EF2EF0 /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		700EFFEC1A9BAA8700661195 /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
+				70A680D91AA417D100EF2EF0 /* Transitions */,
 				700E000F1A9BCB4700661195 /* NewsFeedViewController.swift */,
 				70A680D31AA4072F00EF2EF0 /* LightboxViewController.swift */,
 				700EFFEF1A9BAA8700661195 /* AppDelegate.swift */,
@@ -110,6 +117,16 @@
 				700EFFEE1A9BAA8700661195 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70A680D91AA417D100EF2EF0 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				70A680D51AA417CD00EF2EF0 /* BaseTransition.swift */,
+				70A680D61AA417CD00EF2EF0 /* FadeTransition.swift */,
+				70A680DA1AA41C4A00EF2EF0 /* ImageTransition.swift */,
+			);
+			name = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +229,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				700EFFF01A9BAA8700661195 /* AppDelegate.swift in Sources */,
+				70A680D81AA417CD00EF2EF0 /* FadeTransition.swift in Sources */,
+				70A680D71AA417CD00EF2EF0 /* BaseTransition.swift in Sources */,
 				700E00101A9BCB4700661195 /* NewsFeedViewController.swift in Sources */,
+				70A680DB1AA41C4A00EF2EF0 /* ImageTransition.swift in Sources */,
 				70A680D41AA4072F00EF2EF0 /* LightboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
