@@ -16,6 +16,8 @@ class NewsFeedViewController: UIViewController {
     var selectedImageView: UIImageView!
     var fadeTransition: FadeTransition!
     
+    var imageTransition: ImageTransition!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,11 +47,14 @@ class NewsFeedViewController: UIViewController {
         
         destinationViewController.photoDetail = selectedImageView.image
         
-        fadeTransition = FadeTransition()
-        fadeTransition.duration = 3
+//        fadeTransition = FadeTransition()
+//        fadeTransition.duration = 3
+        
+        imageTransition = ImageTransition()
+        imageTransition.duration = 3
         
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
-        destinationViewController.transitioningDelegate = fadeTransition
+        destinationViewController.transitioningDelegate = imageTransition
         
     }
 

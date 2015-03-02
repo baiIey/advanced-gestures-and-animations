@@ -28,6 +28,26 @@ iOS 7.0 and newer constants include:
 	
 	UIStatusBarStyleDefault
 	A dark status bar, intended for use on light backgrounds.
+	
+	
+#####Setting iOS Status Bar Color
+Classmate Stacey Adams corrected an issue with calling controllers nested in tab controllers with by calling two additional variables, such that: 
+
+`var tabViewController = fromViewController as UITabBarController
+var feedNavViewController = tabViewController.viewControllers![0] as UINavigationController
+var feedViewController = feedNavViewController.topViewController as FeedViewController
+feedViewController.selectedImageView.hidden = true
+var photoViewController = toViewController as PhotoViewController
+photoViewController.photoDetail.hidden = true`
+
+Which I adjusted for my code by calling my own custom view controllers:
+
+`        var tabViewController = fromViewController as UITabBarController
+        var feedNavViewController = tabViewController.viewControllers![0] as UINavigationController
+        var feedViewController = feedNavViewController.topViewController as NewsFeedViewController
+        feedViewController.selectedImageView.hidden = true
+        var photoViewController = toViewController as LightboxViewController
+        photoViewController.photoView.hidden = true`
 
 
 #### Walkthrough of all user stories

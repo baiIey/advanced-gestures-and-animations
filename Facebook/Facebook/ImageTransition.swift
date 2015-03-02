@@ -12,11 +12,26 @@ class ImageTransition: BaseTransition {
 
     override func presentTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
         
-        var newsFeedViewController = fromViewController as NewsFeedViewController
-        newsFeedViewController.selectedImageView.hidden = true
+//        var newsFeedViewController = fromViewController as NewsFeedViewController
+//        newsFeedViewController.selectedImageView.hidden = true
+//        
+//        var photoViewController = toViewController as LightboxViewController
+//        photoViewController.photoView.hidden = true
         
+        
+        var tabViewController = fromViewController as UITabBarController
+        var feedNavViewController = tabViewController.viewControllers![0] as UINavigationController
+        var feedViewController = feedNavViewController.topViewController as NewsFeedViewController
+        feedViewController.selectedImageView.hidden = true
         var photoViewController = toViewController as LightboxViewController
         photoViewController.photoView.hidden = true
+        
+        var movingImageView = UIImageView(image: feedViewController.selectedImageView.image)
+        movingImageView.frame = feedViewController.selectedImageView.frame
+        movingImageView.contentMode = feedViewController.selectedImageView.contentMode
+        movingImageView.clipsToBounds = feedViewController.selectedImageView.clipsToBounds 
+        containerView.addSubview(movingImageView)
+        
         
         toViewController.view.alpha = 0
         UIView.animateWithDuration(duration, animations: {
