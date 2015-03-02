@@ -57,17 +57,39 @@ class LightboxViewController: UIViewController {
             // println("Pan started")
         } else if (sender.state == UIGestureRecognizerState.Changed) {
             // allows for panning on the y-axis only
-           photoView.center = CGPoint(x: imageOrigin.x , y: imageOrigin.y + translation.y)
+            println("\(translation.y)")
+            
+            if (translation.y < 0){
+                self.photoView.alpha = (150 + translation.y)/100
+                self.doneButtonImage.alpha = (150 + translation.y)/100
+                self.imageActionsImage.alpha = (150 + translation.y)/100
+                self.bodyView.alpha = (150 + translation.y)/100
+            } else if (translation.y > 0) {
+                self.photoView.alpha = (150 - translation.y)/100
+                self.doneButtonImage.alpha = (150 - translation.y)/100
+                self.imageActionsImage.alpha = (150 - translation.y)/100
+                self.bodyView.alpha = (150 - translation.y)/100
+            }
+            
+
+            
+            photoView.center = CGPoint(x: imageOrigin.x , y: imageOrigin.y + translation.y)
             
         } else if (sender.state == UIGestureRecognizerState.Ended){
             // ended pan
             // println("Pan ended")
             
-            //upon release, move image back to initial position
+            //u pon release, move image back to initial position if view is in certain range
             if (translation.y < 100 && translation.y > -100){
                 UIView.animateWithDuration(0.5, animations: { () -> Void in
                     self.photoView.center = self.imageOrigin
+                    self.photoView.alpha = 1
                 })
+            }
+            else {
+                // otherwise drag far enough to dimiss the view
+                dismissViewControllerAnimated(true, completion: nil)
+                self.photoView.alpha = 0
             }
 
         }
