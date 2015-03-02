@@ -51,7 +51,7 @@ class NewsFeedViewController: UIViewController {
 //        fadeTransition.duration = 3
         
         imageTransition = ImageTransition()
-        imageTransition.duration = 3
+        imageTransition.duration = 0.5
         
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
         destinationViewController.transitioningDelegate = imageTransition
