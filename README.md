@@ -2,9 +2,6 @@
 Tackling some more advanced features in gestures and animations that are used in modern iOS apps. Specifically, many of the more polished iOS apps often have custom transitions between view controllers as well as visual elements that move between view controllers.
 
 
-#### Time spent
-x hours spent in total
-
 #### Project requirements
 * Tapping on a photo in the news feed should expand the photo full screen.
 * Tapping the Done button should animate the photo back into its position in the news feed.
