@@ -29,15 +29,18 @@ class ImageTransition: BaseTransition {
         var movingImageView = UIImageView(image: feedViewController.selectedImageView.image)
         movingImageView.frame = feedViewController.selectedImageView.frame
         movingImageView.contentMode = feedViewController.selectedImageView.contentMode
-        movingImageView.clipsToBounds = feedViewController.selectedImageView.clipsToBounds 
+        movingImageView.clipsToBounds = feedViewController.selectedImageView.clipsToBounds
         containerView.addSubview(movingImageView)
         
         
         toViewController.view.alpha = 0
         UIView.animateWithDuration(duration, animations: {
             toViewController.view.alpha = 1
+            movingImageView.frame = photoViewController.photoView.frame
             }) { (finished: Bool) -> Void in
                 self.finish()
+                photoViewController.photoView.hidden = false
+                movingImageView.removeFromSuperview()
         }
     }
     
