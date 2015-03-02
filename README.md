@@ -1,10 +1,12 @@
-# Advanced Gestures and Animations (Facebook)
+#Advanced Gestures and Animations (Facebook)
 Tackling some more advanced features in gestures and animations that are used in modern iOS apps. Specifically, many of the more polished iOS apps often have custom transitions between view controllers as well as visual elements that move between view controllers.
 
+#### Time spent
+12 hours spent in total
 
 #### Project requirements
-* Tapping on a photo in the news feed should expand the photo full screen.
-* Tapping the Done button should animate the photo back into its position in the news feed.
+* ✓ Tapping on a photo in the news feed should expand the photo full screen.
+* ✓ Tapping the Done button should animate the photo back into its position in the news feed.
 * On scroll of the full screen photo, the background should start to become transparent, revealing the feed.
 * If the user scrolls a large amount and releases, the full screen photo should dismiss.
 * Optional: The full screen photo should be zoomable.
