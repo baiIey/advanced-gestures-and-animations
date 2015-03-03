@@ -32,7 +32,7 @@ iOS 7.0 and newer constants include:
 	A dark status bar, intended for use on light backgrounds.
 	
 	
-#####Setting iOS Status Bar Color
+#####Calling view controllers
 Classmate Stacey Adams corrected an issue with calling controllers nested in tab controllers with by calling two additional variables, such that: 
 
 `var tabViewController = fromViewController as UITabBarController
