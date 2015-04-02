@@ -35,7 +35,6 @@ class ImageTransition: BaseTransition {
         var frame = containerView.convertRect(feedViewController.selectedImageView.frame, fromView: feedViewController.scrollView)
         movingImageView.frame = frame
 
-        
         toViewController.view.alpha = 0
         UIView.animateWithDuration(duration, animations: {
             toViewController.view.alpha = 1
