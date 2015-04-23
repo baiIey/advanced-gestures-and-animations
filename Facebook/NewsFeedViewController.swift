@@ -32,7 +32,7 @@ class NewsFeedViewController: UIViewController {
     }
     
     @IBAction func onTap(sender: UITapGestureRecognizer) {
-        selectedImageView = sender.view as UIImageView
+        selectedImageView = sender.view as! UIImageView
         
         performSegueWithIdentifier("photoSegue", sender: nil)
     }
@@ -43,7 +43,7 @@ class NewsFeedViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         println("I'm preparing for segue")
         
-        var destinationViewController = segue.destinationViewController as LightboxViewController
+        var destinationViewController = segue.destinationViewController as! LightboxViewController
         
         destinationViewController.photoDetail = selectedImageView.image
         

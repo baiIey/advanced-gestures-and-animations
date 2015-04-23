@@ -19,11 +19,11 @@ class ImageTransition: BaseTransition {
 //        photoViewController.photoView.hidden = true
         
         
-        var tabViewController = fromViewController as UITabBarController
-        var feedNavViewController = tabViewController.viewControllers![0] as UINavigationController
-        var feedViewController = feedNavViewController.topViewController as NewsFeedViewController
+        var tabViewController = fromViewController as! UITabBarController
+        var feedNavViewController = tabViewController.viewControllers![0] as! UINavigationController
+        var feedViewController = feedNavViewController.topViewController as! NewsFeedViewController
         feedViewController.selectedImageView.hidden = true
-        var photoViewController = toViewController as LightboxViewController
+        var photoViewController = toViewController as! LightboxViewController
         photoViewController.photoView.hidden = true
         
         var movingImageView = UIImageView(image: feedViewController.selectedImageView.image)
@@ -48,11 +48,11 @@ class ImageTransition: BaseTransition {
     
     override func dismissTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
         
-        var photoViewController = fromViewController as LightboxViewController
+        var photoViewController = fromViewController as! LightboxViewController
         
-        var tabViewController = toViewController as UITabBarController
-        var feedNavViewController = tabViewController.viewControllers![0] as UINavigationController
-        var feedViewController = feedNavViewController.topViewController as NewsFeedViewController
+        var tabViewController = toViewController as! UITabBarController
+        var feedNavViewController = tabViewController.viewControllers![0] as! UINavigationController
+        var feedViewController = feedNavViewController.topViewController as! NewsFeedViewController
         
         var movingImageView = UIImageView(image: photoViewController.photoView.image)
         movingImageView.contentMode = photoViewController.photoView.contentMode
