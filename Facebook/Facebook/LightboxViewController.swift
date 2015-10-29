@@ -57,7 +57,7 @@ class LightboxViewController: UIViewController {
             // println("Pan started")
         } else if (sender.state == UIGestureRecognizerState.Changed) {
             // allows for panning on the y-axis only
-            println("\(translation.y)")
+            //print (translation.y);")
             
             if (translation.y < 0){
                 self.photoView.alpha = (150 + translation.y)/100

@@ -173,6 +173,7 @@
 		700EFFE21A9BAA8700661195 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Nevver;
 				TargetAttributes = {

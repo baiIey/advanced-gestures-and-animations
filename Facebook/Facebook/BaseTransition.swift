@@ -32,7 +32,7 @@ class BaseTransition: NSObject, UIViewControllerTransitioningDelegate, UIViewCon
         return self
     }
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration
     }
     
@@ -54,10 +54,10 @@ class BaseTransition: NSObject, UIViewControllerTransitioningDelegate, UIViewCon
         
         if (isPresenting) {
             toViewController.view.bounds = fromViewController.view.bounds
-            containerView.addSubview(toViewController.view)
-            presentTransition(containerView, fromViewController: fromViewController, toViewController: toViewController)
+            containerView!.addSubview(toViewController.view)
+            presentTransition(containerView!, fromViewController: fromViewController, toViewController: toViewController)
         } else {
-            dismissTransition(containerView, fromViewController: fromViewController, toViewController: toViewController)
+            dismissTransition(containerView!, fromViewController: fromViewController, toViewController: toViewController)
         }
     }
     

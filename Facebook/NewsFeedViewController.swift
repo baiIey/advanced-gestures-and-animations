@@ -41,7 +41,7 @@ class NewsFeedViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        println("I'm preparing for segue")
+        print("I'm preparing for segue")
         
         var destinationViewController = segue.destinationViewController as! LightboxViewController
         
